@@ -1,17 +1,24 @@
-import React from "react";
-import ShoppingItem from "./ShoppingItem";
+import React from 'react';
 
-function ShoppingList(props) {
-  return (
-    <ul>
-      {props.items.map((item, i) => (
-        <ShoppingItem key={i} item={item} />
-      ))}
-    </ul>
-  );
-  ShoppingList.defaultProps = {
-    items: [],
-  };
+function ShoppingItem(props) {
+    return (
+        <li>
+            <h2 style={{
+                textDecoration: props.item.checked ? 'line-through' : null,
+            }}>
+                {props.item.name}
+
+            </h2>
+            <button type='button'>check</button>
+            <button type='button'>delete</button>
+        </li>
+    )
+    
+}
+
+ShoppingItem.defaultProps = {
+    item: {}
 }
 
 export default ShoppingItem;
+

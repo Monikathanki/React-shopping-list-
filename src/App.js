@@ -1,7 +1,7 @@
 import React from 'react';
 import AddItemForm from './AddItemForm';
 import ShoppingList from './ShoppingList';
-import ShoppingItem from './ShoppingItem';
+
 import './App.css';
 
 
@@ -27,6 +27,7 @@ class App extends React.Component {
           <section>
             <ShoppingList items={this.state.shoppingItems} />
           </section>
+          
         </main>
       </>
     )
